@@ -21,3 +21,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('test', function () {
     return response()->json(['message' => 'Hello World']);
 });
+
+Route::group(['namespace' => 'App\Http\Controllers'], function () {
+    Route::resource('pokemons', 'PokemonController');
+    Route::resource('transactions', 'TransactionController');
+    Route::get('portifolio', 'TransactionController@getPortifolio');
+    Route::get('dashboard', 'DashboardController@getDashboard');
+});

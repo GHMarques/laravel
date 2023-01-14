@@ -149,4 +149,12 @@ return [
 
     'attributes' => [],
 
+    ### validation message ###
+    'validation_required' => 'The :attribute field is required.',
+    'validation_string' => 'The :attribute must be a string.',
+    'validation_exists' => 'The selected :attribute is invalid.',
+    'validation_date' => 'The :attribute is not a valid date.',
+    'validation_numeric' => 'The :attribute must be a number.',
+    'validation_min_number' => 'The :attribute must be at least :min.',
+
 ];
